@@ -11,18 +11,18 @@ class _MyAppState extends State<MyApp> {
   int _counter = 0;
 
   // method untuk penambahan
-  void _increment(){
-    setState(() {
-      _counter++;
-    });
-  }
+  // void _increment(){
+  //   setState(() {
+  //     _counter++;
+  //   });
+  // }
 
   // method untuk pengurangan
-  void _decrement(){
-    setState(() {
-      _counter--;
-    });
-  }
+  // void _decrement(){
+  //   setState(() {
+  //     _counter--;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -40,12 +40,18 @@ class _MyAppState extends State<MyApp> {
               SizedBox(height: 5,),
               ElevatedButton(
                 onPressed: () {
-                  _increment();
+                  //_increment();
+                  setState(() {
+                    _counter++;
+                  });
                 },
                 child: Text('Increment')),
                 ElevatedButton(
                 onPressed: () {
-                  _decrement();
+                  //_decrement();
+                  setState(() {
+                    _counter--;
+                  });
                 },
                 child: Text('Decrement'))
             ],
